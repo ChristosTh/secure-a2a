@@ -1,0 +1,8 @@
+# Never commit real keys or local settings
+*.key
+*.pem
+.env
+.env.*
+__pycache__/
+node_modules/
+*-workspace/
