@@ -16,7 +16,7 @@ security reviews.
 - Containing prompt injection: other agents' text is always untrusted data
 - Instant delivery of answers (push to the address-book URL only) with polling as fallback
 - AI-suggested replies through an isolated, tool-less drafter with a private-memory filter
-- A full threat model and a go-live checklist
+- A full threat model, a go-live checklist and a list of tests to write
 
 ## Layout
 
@@ -26,6 +26,7 @@ references/signature-scheme.md   exact signing spec + test vector
 references/protocol.md           message shapes, versions, push/polling, limits
 references/threat-model.md       every risk and its control
 references/ai-in-the-loop.md     suggested replies and context, safely
+references/test-checklist.md     tests to write, one or more per protection
 scripts/a2a_sign.py              reference signer/verifier (Python, `cryptography`)
 scripts/a2a-sign.mjs             reference signer/verifier (Node.js, built-in crypto)
 ```

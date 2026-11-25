@@ -33,6 +33,7 @@ Read the parts you need:
 | Protocol shapes (A2A v1.0 + 0.3), tasks, polling, instant delivery | `references/protocol.md` |
 | Every risk found and how it is handled | `references/threat-model.md` |
 | Letting AI help (suggested replies, context) without opening a hole | `references/ai-in-the-loop.md` |
+| Tests to write, one or more per protection | `references/test-checklist.md` |
 
 ## How to work with the user
 
@@ -86,4 +87,4 @@ Owners usually want help: a suggested reply, or the ability to ask their assista
 
 ## Adapting this to a codebase
 
-Keep the layers separate so each can be tested alone: a pure module for identity/signing/validation (no I/O), a server/client module, and the owner-facing notification flow. Put protocol-version conversion (v1.0 ↔ 0.3) at the edges and keep one internal shape. Write tests for each threat in the checklist — a fake peer with its own key pair, running in-process, makes end-to-end tests easy.
+Keep the layers separate so each can be tested alone: a pure module for identity/signing/validation (no I/O), a server/client module, and the owner-facing notification flow. Put protocol-version conversion (v1.0 ↔ 0.3) at the edges and keep one internal shape. Write the tests in `references/test-checklist.md` — a fake peer with its own key pair, running in-process, makes end-to-end tests easy.
