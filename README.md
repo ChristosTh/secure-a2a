@@ -1,6 +1,6 @@
 # secure-a2a
 
-A skill for Claude (and a plain guide for humans) on building **secure agent-to-agent communication between personal
+An AI skill (for Claude or any other AI coding tool) and a plain guide for developers on building **secure agent-to-agent communication between personal
 AI assistants** owned by different people — for example, a friend's assistant asking yours when you're free, or
 passing a message that you answer with one tap.
 
@@ -33,8 +33,17 @@ scripts/a2a-sign.mjs             reference signer/verifier (Node.js, built-in cr
 
 ## Use it
 
+It works with any AI, or none: the format is a standard `SKILL.md` skill, but everything in it is plain Markdown
+and ordinary Python/Node code. The design doesn't depend on which AI model your assistant uses.
+
 **As a Claude skill:** copy this folder into your skills directory (e.g. `~/.claude/skills/secure-a2a/`).
 Claude will use it when you ask to connect your agent with someone else's.
+
+**With other AI coding tools** (Codex, Cursor, Copilot, …): put the folder in your project, or wherever your tool
+loads skills from, and point the assistant at `SKILL.md`. It links to the other files when they're needed.
+
+**As a plain guide:** start with `SKILL.md` (design and rules), then `references/` for the details. The scripts in
+`scripts/` are standalone reference code you can use in any project.
 
 **Check interoperability:** both sides should pass the same test vector:
 
